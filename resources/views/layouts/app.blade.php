@@ -17,13 +17,7 @@
         <div class="row">
             <div class="col-md-9">
                 <div class="well">
-                    @if(count($errors) > 0)
-                        @foreach($errors->all() as $error)
-                            <div class="alert alert-danger">
-                                {{error}}
-                            </div>
-                        @endforeach
-                    @endif
+                    @include('inc.message')
                     @yield('content')
                 </div>
             </div>
